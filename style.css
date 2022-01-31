@@ -1,13 +1,17 @@
 .container {
-    background: black;
+    background: rgba(0, 0, 0, 0.137);
     display: inline-block;
-    border: 1px solid black;
+    border: 3px solid rgba(238, 68, 68, 0.973);
   }
   
+:root {
+  --squareNum: ;
+}
+
   #grid {
     display: grid;
-    grid-template-columns: repeat(16, auto);
-    grid-template-rows: repeat(16, auto);
+    grid-template-columns: repeat(var(--squareNum), auto);
+    grid-template-rows: repeat(var(--squareNum), auto);
     grid-gap: 1px;
     width: 335px;
     height: 335px;
@@ -16,3 +20,36 @@
   .cell {
     background: white;
   }
+
+  body{
+    margin:0;
+    background-color: #E5E7EB;
+  }
+
+  .title{
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+    font-size: 40px;
+    color: white;
+    padding: 30px;
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.815), rgba(238, 68, 68, 0.973))
+}
+
+.containerOfContainer{
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+}
+
+.buttonContainer{
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  width: 100px;
+  height: 25px;
+  border-radius: 8px;
+  border: 2px solid rgba(238, 68, 68, 0.973);
+}
